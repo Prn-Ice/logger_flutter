@@ -67,10 +67,10 @@ class LogConsole extends StatefulWidget {
   @override
   _LogConsoleState createState() => _LogConsoleState();
 
-  static void openLogConsole(BuildContext context) async {
+  static void openLogConsole(BuildContext context, {bool? dark}) async {
     var logConsole = LogConsole(
       showCloseButton: true,
-      dark: Theme.of(context).brightness == Brightness.dark,
+      dark:dark ?? Theme.of(context).brightness == Brightness.dark,
     );
     PageRoute route;
     route = MaterialPageRoute(builder: (_) => logConsole);
