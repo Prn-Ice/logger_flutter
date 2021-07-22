@@ -62,12 +62,14 @@ class HomeWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           LogConsoleOnShake(
-            dark: true,
-            child: Center(
-              child: Text("Shake Phone to open Console."),
-            ),
+            dark: false,
+            debugOnly: false,
+            child: Center(child: Text("Shake Phone to open Console.")),
           ),
-          FlatButton(onPressed: () => LogConsole.open(context), child: Text("or click here to open Console")),
+          FlatButton(
+            onPressed: () => LogConsole.open(context),
+            child: Text("or click here to open Console"),
+          ),
         ],
       ),
     );
